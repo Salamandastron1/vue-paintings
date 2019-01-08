@@ -1,29 +1,33 @@
-# vue-paintings
+# Vue-Paintings
+A single page app that lets you explore Harvard's extensive art collection by the century the works were created in.
 
-## Project setup
-```
-npm install
-```
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/Salamandastron1/vue-paintings.svg?columns=all)](https://waffle.io/Salamandastron1/vue-paintings)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Screen Captures
+[]()
+### See it Live
+[Coming Soon!]()
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### APIs used
+* [Harvard Art Museums API](https://www.harvardartmuseums.org/collections/api)
 
-### Run your tests
-```
-npm run test
-```
+### Primary Technologies
+* Vue
 
-### Lints and fixes files
-```
-npm run lint
-```
+### SetUp
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+In the project directory, you can run:
+
+1. Clone down repo
+2. `npm install` from root directory
+3. `npm run serve` and visit `localhost:8080` in your browser
+
+
+### Original Assignment
+
+[Take Home Challenge](https://gist.github.com/letakeane/16882c0604830c5482b25431a6a6cb19)
+
+### Contributors
+
+Tim Garrity: [Github](https://github.com/Salamandastron1)<br>
+
