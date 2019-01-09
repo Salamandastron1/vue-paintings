@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>hi</h1>
+    <h1>{{ century }}</h1>
     <article 
       v-for="photo in photos"
       class="img"
@@ -18,9 +18,9 @@
     data() {
       return {
         photos: [],
+        century: '',
       }
     },
-    props: ['id', 'name'],
     async created() {
       this.photos = await API.photoCleaner();
     }
