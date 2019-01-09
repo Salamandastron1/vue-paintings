@@ -1,6 +1,5 @@
 <template>
-  <section>
-    <h1>{{ century }}</h1>
+  <section class="photo-container">
     <article 
       v-for="photo in photos"
       class="img"
