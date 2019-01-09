@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>Collections</h1>
+    <h1 class="home-title">Collections</h1>
     <section class="centuries">
       <Century 
         v-for="century in collections"

@@ -6,8 +6,16 @@
   color: #2c3e50;
   margin-top: 60px;
 }
-
 .centuries {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  justify-items: center;
+}
+.century {
+  font-size: 3em;
+  border: 1px solid black;
+}
+.home-title {
+  font-size: 4em;
 }

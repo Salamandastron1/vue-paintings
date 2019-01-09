@@ -1,5 +1,8 @@
 <template>
-  <article>
+  <article 
+    class="century"
+    @click="centuryRoute"
+  >
     <h2>{{ name }}</h2>
   </article>
 </template>
@@ -7,6 +10,11 @@
 <script type="text/javascript">
   export default {
     name: 'Century',
-    props: ['name', 'id']
+    props: ['name', 'id'],
+    methods: {
+      centuryRoute() {
+        console.log(this.id);
+      }
+    }
   }
 </script>
