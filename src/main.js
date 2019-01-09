@@ -9,7 +9,7 @@ Vue.use(VueRouter);
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/century/:id', component: Photos }
+  { path: '/century/:id', component: Photos, props: true, }
 ];
 
 const router = new VueRouter({

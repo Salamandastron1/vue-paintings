@@ -13,7 +13,7 @@
     props: ['name', 'id'],
     methods: {
       centuryRoute() {
-        this.$router.push(`/century/${this.id}`)
+        this.$router.push(`/century/${this.name}`)
       }
     }
   }

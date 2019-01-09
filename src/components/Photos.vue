@@ -1,8 +1,14 @@
 <template>
   <section>
-    <h1>{{ name }}</h1>
-    <article>
-    </article>
+    <router-link to="/">Back to Collections</router-link>
+    <section class="photo-container">
+      <article 
+        v-for="photo in photos"
+        class="img"
+        v-bind:style="{ backgroundImage: 'url(' + photo.baseimageurl + ')'}"
+      >
+      </article>
+    </section>
   </section>
 </template>
 
@@ -14,14 +20,11 @@
     data() {
       return {
         photos: [],
+        century: '',
       }
     },
-    props: ['id', 'name'],
-    create() {
-      console.log(this.name, this.id)
-      const url = `https://api.harvardartmuseums.org/century/${this.id}?apikey=6aadb940-12c8-11e9-b96e-b96134bf93ea`;
-
-      API.apiCall(url)
+    async created() {
+      this.photos = await API.photoCleaner();
     }
   }
 </script>

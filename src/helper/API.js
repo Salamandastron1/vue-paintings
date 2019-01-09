@@ -29,5 +29,13 @@ export const centuryCleaner = function(centuryData) {
   }));
 };
 
+export const photoCleaner = async function() {
+  //eslint-disable-next-line
+  const page = Math.floor(Math.random() * Math.floor(40))
+  const url = `https://api.harvardartmuseums.org/image/?apikey=6aadb940-12c8-11e9-b96e-b96134bf93ea&page=${page}`
+  const data = await apiCall(url);
+
+  return data.records
+}
 
 
