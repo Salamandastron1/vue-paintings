@@ -29,5 +29,18 @@ export const centuryCleaner = function(centuryData) {
   }));
 };
 
+export const photoCleaner = async function(categories) {
+  //eslint-disable-next-line
+  console.log(categories)
+  const response = await Promise.all(categories.contains.groups.map(async cat => {
+      const url = `https://api.harvardartmuseums.org/group/${cat.groupid}?apikey=6aadb940-12c8-11e9-b96e-b96134bf93ea&sort=temporalorder&sortorder=desc`
+      const groupResponse = await apiCall(url)
+
+      return groupResponse
+    })
+  )
+
+  console.log(response)
+}
 
 

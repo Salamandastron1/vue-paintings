@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>{{ name }}</h1>
+    <h1>hi</h1>
     <article>
     </article>
   </section>
@@ -17,11 +17,13 @@
       }
     },
     props: ['id', 'name'],
-    create() {
-      console.log(this.name, this.id)
-      const url = `https://api.harvardartmuseums.org/century/${this.id}?apikey=6aadb940-12c8-11e9-b96e-b96134bf93ea`;
+    async created() {
+    //eslint-disable-next-line
+      console.log('hello');
+      const url = `https://api.harvardartmuseums.org/century/${this.$route.params.id}?apikey=6aadb940-12c8-11e9-b96e-b96134bf93ea`;
+      const data = await API.apiCall(url);
 
-      API.apiCall(url)
+      this.photos = API.photoCleaner(data);
     }
   }
 </script>
