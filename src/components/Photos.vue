@@ -18,12 +18,7 @@
     },
     props: ['id', 'name'],
     async created() {
-    //eslint-disable-next-line
-      console.log('hello');
-      const url = `https://api.harvardartmuseums.org/century/${this.$route.params.id}?apikey=6aadb940-12c8-11e9-b96e-b96134bf93ea`;
-      const data = await API.apiCall(url);
-
-      this.photos = API.photoCleaner(data);
+      this.photos = await API.photoCleaner();
     }
   }
 </script>
