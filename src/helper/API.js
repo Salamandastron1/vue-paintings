@@ -8,23 +8,26 @@ export const apiCall = async function (url, options) {
     } else {
       response = await fetch(url);
     }
-
     data = await response.json();
+
   } catch(error) {
-    console.log(error.message);
+      if (error.name == "SyntaxError") {
+      alert( "JSON Error: " + error.message );
+    } else {
+      throw error;
+    }
   }
 
   return data
 };
 
 export const centuryCleaner = function(centuryData) {
-
-  return centuryData.results.map(century => ({ 
+  return centuryData.records.map(century => ({ 
     id: century.id,
     temporalOrder: century.temporalOrder,
     name: century.name,
   }));
-}
+};
 
 
 
