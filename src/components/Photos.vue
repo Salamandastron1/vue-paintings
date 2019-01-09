@@ -1,7 +1,11 @@
 <template>
   <section>
     <h1>hi</h1>
-    <article>
+    <article 
+      v-for="photo in photos"
+      class="img"
+      v-bind:style="{ backgroundImage: 'url(' + photo.baseimageurl + ')'}"
+    >
     </article>
   </section>
 </template>
