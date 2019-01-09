@@ -14,17 +14,21 @@
 }
 .century {
   font-size: 3em;
-  border: 1px solid black;
+  border: 5px solid #35495e;
+  padding: 5px;
 }
 .home-title {
   font-size: 4em;
 }
 .photo-container {
   display: flex;
-  flex-wrap: row wrap;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 .img {
-  height: 100px;
-  width: 100px;
+  height: 500px;
+  width: 500px;
+  background-image: no-repeat center center fixed;
+  margin: 20px;
+  border: solid 20px #41b883;
 }
